@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import './Search.css'
 export default class Search extends Component {
     constructor(){
@@ -18,8 +18,7 @@ export default class Search extends Component {
         <form >
             <input className='movieSearch' type="text" placeholder='Title'/>
             <button>Search</button>
-            <input className='genreSearch' type="text" placeholder='Genre'/>
-            <button>Search</button>
+
         </form>
       </div>
     )
