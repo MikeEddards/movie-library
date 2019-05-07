@@ -1,0 +1,22 @@
+form {
+    width: 90vw;
+    height: 40vh;
+
+    border-radius: 8px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.movieSearch,.genreSearch {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+button{
+    color: rgb(255, 255, 255);
+    background: rgb(0, 153, 255);
+    border-radius: 16px;
+}
