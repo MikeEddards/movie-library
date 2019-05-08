@@ -10,24 +10,23 @@ export default class Display extends Component {
     }
     
     componentDidMount() {
-        axios.get('http://localhost:4100/api/movielist')
+        axios.get('/api/movielist')
         .then(res => {
             this.setState({list: res.data})
           })
       }
   render() {
     const { list } = this.state
+    const movie = list.map(list => (
+      <div className='movieCard'>
+      <img src={list.Poster} alt=""/>
+      <h4>{list.Title}</h4>
+      </div>
+  ))
     return (
       <div>
         <div className="cards">
-            {list.map(list => (
-                <div className='movieCard'>
-                <img src={list.Poster} alt=""/>
-                <h4>{list.Title}</h4>
-                </div>
-            ))
-
-            }
+            {movie}
         </div>
       </div>
     )
