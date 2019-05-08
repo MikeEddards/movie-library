@@ -1,5 +1,5 @@
 import React from 'react';
-import cors from 'cors'
+
 import Header from './Components/Header'
 import Search from './Components/Search'
 import Display from './Components/Display'

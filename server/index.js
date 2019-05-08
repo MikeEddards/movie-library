@@ -5,8 +5,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const port = 4100
+const PORT = 4100
 
 app.get('/api/movielist', getMovies.movieList)
+app.get('/api/movielist/:id', getMovies.getMoviesById)
+app.post('/api/addmovie', getMovies.addMovie)
 
-app.listen(port, () => console.log(`Listening on port: ${port}`))
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
