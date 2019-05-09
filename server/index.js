@@ -9,8 +9,11 @@ const PORT = 4100
 
 app.get('/api/movielist', getMovies.movieList)
 app.get('/api/movielist/:id', getMovies.getMoviesById)
+
 app.post('/api/addmovie', getMovies.addMovie)
 
 app.put('/api/edit/:id', getMovies.editMovie)
+
+app.delete('/api/deletemovie/:id', getMovies.deleteMovie)
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))

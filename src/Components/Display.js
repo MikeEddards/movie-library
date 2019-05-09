@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Edit from './Edit'
 import './Display.css'
 export default class Display extends Component {
     constructor(){
@@ -7,8 +8,10 @@ export default class Display extends Component {
         this.state = {
             list: [],
             delete: false,
-            edit: false
+            edit: false,
+            movieToEdit: []
         }
+        this.completeEdit = this.completeEdit.bind(this)
     }
     
     componentDidMount() {
@@ -17,42 +20,50 @@ export default class Display extends Component {
             this.setState({list: res.data})
           })
       }
-    handleClickEdit = () => {
-      this.setState({edit: true})
-    }
-     editField = (e) => {
-       console.log(e)
-      return (
-        <form>
-          <h2>Edit Title</h2>
-          <input type="text"/>
-          <input type="text"/>
-          <button>Submit</button>
-        </form>
-      )
-    }
+      handleClickEdit = (val) => {
+        if(this.state.edit === false){
+          let find = this.state.list.findIndex(movie => val === movie.id)
+          let found = this.state.list[find]
+          this.setState({
+            movieToEdit: found,
+            edit: true
+          })
+        }
+      }
+     completeEdit(res){
+      this.setState({
+        movieToEdit: [],
+        edit: false,
+        list: res.data})
+      }   
+
+
   render() {
+    
     const { list } = this.state
-    const movie = list.map(list => (
-      <div className='movieCard' key={list.id}>
-        <img src={list.Poster} alt=""/>
+    const movie = list.map((list, i) => (
+      <li className='movieCard' key={i} id={list.id}>
+        <img className='poster' src={list.Poster} alt=""/>
         <h4>{list.Title}</h4>
         <p>{list.Year}</p>
-        <span>
-          { this.state.edit ? this.editField() : null }
-          <button onClick={this.handleClickEdit} name='edit'>Edit</button>
-          <button name='delete'>Delete</button>
-        </span>
-      </div>
-      
-     
-  ))
-    return (
-      <div>
         
+          <button onClick={() => this.handleClickEdit(list.id)}>Edit</button>
           
-        <div className="cards">
+      </li>
+      ))
+      return (
+        <div>
+        
+        <Edit movie={this.state.movieToEdit} completeEdit={this.completeEdit} />
+
+        <div >
+        
+          <ul className="cards">
+            
             {movie}
+
+          </ul>
+
         </div>
       </div>
     )

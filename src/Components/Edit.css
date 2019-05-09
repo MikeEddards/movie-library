@@ -1,0 +1,18 @@
+.editCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #293132;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+.input {
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 10px 0 20px;
+    
+}
