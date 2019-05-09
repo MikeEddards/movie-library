@@ -1,10 +1,28 @@
+.cards{
+    display: flex;
+    flex-flow: wrap;
+    height: 100%;
+    background: #f6fff9;
+    margin-top: 50px;
+    padding-top: 50px;
+}
 .movieCard{
-    background: #293132;
-    width: 24vw;
-    height: 40vh;
+    display: flex;
+    background: #5b6a74;
+    width: 40vw;
+    height: 60vh;
+    margin: 10px;
     color: white;
+    border-radius: 15px;
+    border-right: 3px solid rgb(87, 87, 87);
+    border-bottom: 3px solid rgb(87, 87, 87);
+    box-shadow: 5px 5px 10px rgb(131, 131, 131);
+   
 }
 .poster{
-    height: 260px;
-   
+    height: 40vh;
+    margin-top: 10px;  
+    border-radius: 7px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 10px 10px 20px rgb(59, 64, 66); 
 }

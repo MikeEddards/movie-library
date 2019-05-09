@@ -37,6 +37,30 @@ let collection = [{
     imdbID: "tt1606378",
     Type: "movie",
     Poster: "https://m.media-amazon.com/images/M/MV5BMTcwNzgyNzUzOV5BMl5BanBnXkFtZTcwMzAwOTA5OA@@._V1_SX300.jpg"
-    }]
+    },
+    {
+        id: 6,
+        Title: "The Lord of the Rings: The Fellowship of the Ring",
+        Year: "2001",
+        imdbID: "tt0120737",
+        Type: "movie",
+        Poster: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
+        },
+        {
+        id: 7,
+        Title: "The Lord of the Rings: The Return of the King",
+        Year: "2003",
+        imdbID: "tt0167260",
+        Type: "movie",
+        Poster: "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+        },
+        {
+        id: 8,
+        Title: "The Lord of the Rings: The Two Towers",
+        Year: "2002",
+        imdbID: "tt0167261",
+        Type: "movie",
+        Poster: "https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+        }]
 
     module.exports = collection

@@ -40,13 +40,13 @@ export default class Edit extends Component {
         {this.props.movie.id ? 
       <div className='editCard'>
         <div className='card'>
-        <img src={this.props.movie.Poster} />
+        <img className='poster'src={this.props.movie.Poster} />
         <div>
         <input className='input' onChange={e => this.getInputTitle(e.target.value)} type="text" placeholder={this.props.movie.Title}/>
         <input className='input' onChange={e => this.getInputPoster(e.target.value)} type="text" placeholder={'Poster'}/>
         <button onClick={this.handleEditSubmit}>Submit Edit</button> 
         </div>
-        <button onClick={this.handleDelete}>Delete</button>
+        <button className='deleteButton' onClick={this.handleDelete}>Delete</button>
         </div>
         
         </div>

@@ -9,7 +9,7 @@ form {
     align-items: center;
     flex-direction: column;
 }
-.movieSearch,.genreSearch {
+.movieSearch {
     margin: 10px;
     padding: 5px;
     border-radius: 10px;
@@ -19,4 +19,5 @@ button{
     color: rgb(255, 255, 255);
     background: rgb(0, 153, 255);
     border-radius: 16px;
+    padding: 8px;
 }

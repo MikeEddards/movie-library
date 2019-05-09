@@ -8,7 +8,7 @@ app.use(express.json())
 const PORT = 4100
 
 app.get('/api/movielist', getMovies.movieList)
-app.get('/api/movielist/:id', getMovies.getMoviesById)
+app.get('/api/moviesearch/:id', getMovies.getMoviesByTitle)
 
 app.post('/api/addmovie', getMovies.addMovie)
 

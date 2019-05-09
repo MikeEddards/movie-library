@@ -7,24 +7,25 @@ let collection = require('./movieList')
         movieList(req, res){
             res.status(200).send(collection)
         },
-        getMoviesById(req, res){
-            const movie = collection.filter((collection)=> {
-                return collection.id === + req.params.id
-            } )
-            res.status(200).send(movie[0])
+        getMoviesByTitle(req, res){
+            let reqTitle = req.query.title
+            let name = reqTitle.toLowerCase()
+            let title = collection.map(movie => movie.Title.toLocaleLowerCase())
+            let index = title.findIndex(title => name === title)
+            res.status(200).send(collection[index])
         },
         addMovie(req, res){
-            
+            console.log(req.body)
             let id = collection[collection.length - 1].id + 1
             const newMovie ={
                     id: id,
-                    Title: req.body.Title,
-                    Year: req.body.Year,
-                    Poster: req.body.Poster,    
+                    Title: req.body.title,
+                    Year: req.body.year,
+                    Poster: req.body.poster,    
             }
             collection = [...collection, newMovie]
             res.status(200).send(collection)
-            console.log(collection)
+          
         },
         editMovie(req, res){
         

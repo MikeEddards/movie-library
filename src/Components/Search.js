@@ -6,30 +6,48 @@ export default class Search extends Component {
         super()
         this.state = {
             title: '',
-            selectedTitle: ''
+            selectedMovie: [],
+            filter: false
 
         }
-      
+      this.handelSearchInput = this.handelSearchInput.bind(this)
+      this.handleGetMovieByTitle = this.handleGetMovieByTitle.bind(this)
+      this.clearSearch = this.clearSearch.bind(this)
     }
-   handelSearchInput = val => this.setState({title: val})
+   handelSearchInput(val){
+   
+     this.setState({title: val})
+    }
  
-   handleGetMovieById = (e) => {
-     e.preventDefault()
-    axios.get(`/api/movielist/${this.state.title}`).then((res) => {
-      console.log(res.data)
-      this.setState({selectedTitle: res.data})
+   handleGetMovieByTitle(){
+     this.setState({filter: true})
+    axios.get(`/api/moviesearch/:id?title=${this.state.title}`).then((res) => {
+      this.setState({selectedMovie: res.data})
     })
+    
     this.setState({title: ''})
    } 
+   clearSearch(){
+     this.setState({filter: false})
+   }
 
   render() {
     return (
       <div>
-        <form onSubmit={this.handleGetMovieById}>
+        
+        {this.state.filter ? 
+        <div className='movieCard'>
+          <img src={this.state.selectedMovie.Poster} alt=""/>
+          <h4>{this.state.selectedMovie.Title}</h4>
+          <button onClick={this.clearSearch}>Clear</button>
+          </div>
+          : null }
+         
+        <div >
             <input className='movieSearch' type="text" placeholder='Title' onChange={(e)=> this.handelSearchInput(e.target.value)}/>
-            <button>Search</button>
+            <button onClick={() => this.handleGetMovieByTitle()}>Search</button>
 
-        </form>
+        </div>
       </div>
     )
   }

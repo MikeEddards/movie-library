@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Edit from './Edit'
 import './Display.css'
+import AddMovie from './AddMovie';
 export default class Display extends Component {
     constructor(){
         super()
@@ -53,10 +54,10 @@ export default class Display extends Component {
       ))
       return (
         <div>
-        
+        <AddMovie complete={this.completeEdit}/>
         <Edit movie={this.state.movieToEdit} completeEdit={this.completeEdit} />
 
-        <div >
+        <div className='display'>
         
           <ul className="cards">
             
@@ -65,6 +66,7 @@ export default class Display extends Component {
           </ul>
 
         </div>
+        
       </div>
     )
   }

@@ -1,0 +1,19 @@
+.addMovie{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #5b6a74;
+}
+.addInput{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    border-right: 3px solid rgb(87, 87, 87);
+    border-bottom: 3px solid rgb(87, 87, 87);
+    box-shadow: 5px 5px 10px rgb(131, 131, 131);
+}
