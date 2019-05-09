@@ -1,26 +1,42 @@
 let collection = [{
     id: 1,
-    Title: "The Avengers",
-    Year: "2012",
-    Poster: "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    Title: "Die Hard",
+    Year: "1988",
+    imdbID: "tt0095016",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
     id: 2,
-    Title: "Avengers: Infinity War",
-    Year: "2018",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
+    Title: "Live Free or Die Hard",
+    Year: "2007",
+    imdbID: "tt0337978",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNDQxMDE1OTg4NV5BMl5BanBnXkFtZTcwMTMzOTQzMw@@._V1_SX300.jpg"
     },
     {
     id: 3,
-    Title: "Avengers: Age of Ultron",
-    Year: "2015",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg"
+    Title: "Die Hard: With a Vengeance",
+    Year: "1995",
+    imdbID: "tt0112864",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BZjI0ZWFiMmQtMjRlZi00ZmFhLWI4NmYtMjQ5YmY0MzIyMzRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     },
     {
     id: 4,
-    Title: "Dirty Harry",
-    Year: "1971",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMzdhMTM2YTItOWU2YS00MTM0LTgyNDYtMDM1OWM3NzkzNTM2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-    },]
+    Title: "Die Hard 2",
+    Year: "1990",
+    imdbID: "tt0099423",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMzMzYzk3ZTEtZDg0My00MTY5LWE3ZmQtYzNhYjhjN2RhZGRjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    },
+    {
+    id: 5,
+    Title: "A Good Day to Die Hard",
+    Year: "2013",
+    imdbID: "tt1606378",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTcwNzgyNzUzOV5BMl5BanBnXkFtZTcwMzAwOTA5OA@@._V1_SX300.jpg"
+    }]
 
     module.exports = collection

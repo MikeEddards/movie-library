@@ -27,7 +27,29 @@ let collection = require('./movieList')
             collection = [...collection, newMovie]
             res.status(200).send(collection)
             console.log(collection)
+        },
+        editMovie(req, res){
+        
+            
+            let { title } = req.query
+        
+            let paramId = +req.params.id
+      
+            let id = collection.findIndex(movie => {return paramId === movie.id })
+          
+            collection[id] = {
+                id: paramId,
+                Title: title || collection[id].Title,
+                Year: collection[id].Year,
+                imdbId: collection[id].imdbID,
+                Type: collection[id].Type,
+                Poster: collection[id].Poster
+            }
+            res.status(200).send(collection)
         }
+            
+        
+            
         
 
 }
