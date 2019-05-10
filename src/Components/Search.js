@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+
 import './Search.css'
 export default class Search extends Component {
     constructor(){
@@ -36,17 +37,22 @@ export default class Search extends Component {
       <div>
         
         {this.state.filter ? 
+        <div>
         <div className='movieCard'>
           <img src={this.state.selectedMovie.Poster} alt=""/>
           <h4>{this.state.selectedMovie.Title}</h4>
+      
           <button onClick={this.clearSearch}>Clear</button>
+         
           </div>
+          </div>
+          
           : null }
          
         <div >
             <input className='movieSearch' type="text" placeholder='Title' onChange={(e)=> this.handelSearchInput(e.target.value)}/>
             <button onClick={() => this.handleGetMovieByTitle()}>Search</button>
-
+            
         </div>
       </div>
     )

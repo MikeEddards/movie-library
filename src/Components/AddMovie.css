@@ -17,3 +17,13 @@
     border-bottom: 3px solid rgb(87, 87, 87);
     box-shadow: 5px 5px 10px rgb(131, 131, 131);
 }
+.addMovieApi{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5b6a74;
+}

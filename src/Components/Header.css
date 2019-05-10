@@ -2,12 +2,11 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Merienda', cursive;
+    font-family: 'Libre Baskerville', serif;
     width: 100vw;
 }
 h1{
     font-size: 60px;
-    background: linear-gradient(330deg,rgb(30, 255, 0) 0%, rgb(1, 247, 255) 50%, rgb(0, 255, 34) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    color: rgb(198, 242, 255);
+    text-shadow: rgb(73, 168, 172) 3px 3px 10px, rgb(73, 168, 172) -3px -3px 10px, rgb(73, 168, 172) -3px 3px 10px, rgb(73, 168, 172) 3px -3px 10px;
 }

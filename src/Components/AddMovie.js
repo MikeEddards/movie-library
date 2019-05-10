@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import ApiSearch from './ApiSearch'
 import './AddMovie.css'
 export default class AddMovie extends Component {
     constructor(){
@@ -35,11 +36,18 @@ export default class AddMovie extends Component {
       this.setState({poster: val})
     }
 
-    handleAdd(){
+    handleAdd(val){
+      console.log(val)
+      this.setState({
+        title: val.Title,
+        year: val.Year,
+        poster: val.Poster 
+      })
+      console.log(this.state)
       let newMovie = {
-        title: this.state.title,
-        year: this.state.year,
-        poster: this.state.poster 
+        title: this.state.title || val.Title,
+        year: this.state.year || val.Year,
+        poster: this.state.poster || val.Poster
       }
       axios.post('/api/addmovie',newMovie).then(
         res => {this.props.complete(res)
@@ -55,6 +63,7 @@ export default class AddMovie extends Component {
     return (
       <div>
         {this.state.addMovie? 
+        <div>
         <div className='addMovie'>
 
           <input className='addInput' onChange={(e)=>this.handleTitle(e.target.value)} type="text" placeholder='Title'/>
@@ -62,6 +71,10 @@ export default class AddMovie extends Component {
           <input className='addInput' onChange={(e)=>this.handlePoster(e.target.value)} type="text" placeholder='Url for Movie Poster'/>
           <button onClick={this.handleAdd}>Add to Collection</button>
         </div> 
+        <div>
+            <ApiSearch addMovie={this.handleAdd}/>
+        </div>
+        </div>
         : null
       
       }

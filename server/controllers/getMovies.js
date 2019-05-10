@@ -1,5 +1,6 @@
 const axios = require('axios')
 let collection = require('./movieList')
+let link = require('./.apiLink.js')
 
 
     module.exports ={
@@ -31,11 +32,11 @@ let collection = require('./movieList')
         
             
             let { title, poster  } = req.query
-            // let { } = req.query
+         
             let paramId = +req.params.id
       
             let id = collection.findIndex(movie => {return paramId === movie.id })
-          console.log(title,poster)
+         
             collection[id] = {
                 id: paramId,
                 Title: title || collection[id].Title,
@@ -44,7 +45,7 @@ let collection = require('./movieList')
                 Type: collection[id].Type,
                 Poster: poster || collection[id].Poster
             }
-            console.log(collection[id])
+          
             
             res.status(200).send(collection)
         },
@@ -53,7 +54,23 @@ let collection = require('./movieList')
             let index = collection.findIndex(movie => {return deleteId === movie.id })
             collection.splice(index, 1)
             res.status(200).send(collection)
-        }
+        },
+        apiSearch(req, res){
+            let { search } = req.query
+            let id = req.params.id
+            let data = []
+            console.log(search)
+            console.log(id)
+            axios.get(`${link.url}${search}&type=movie&page=${id}&apikey=${link.key}`)
+            
+            .then(res2 => {data = res2.data
+                
+                res.status(200).send(data)})
+            
+            .catch(err => console.log(err));
+            
+        },
+      
             
         
             

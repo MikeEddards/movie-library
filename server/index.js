@@ -9,6 +9,7 @@ const PORT = 4100
 
 app.get('/api/movielist', getMovies.movieList)
 app.get('/api/moviesearch/:id', getMovies.getMoviesByTitle)
+app.get('/api/movieapisearch/:id', getMovies.apiSearch)
 
 app.post('/api/addmovie', getMovies.addMovie)
 
