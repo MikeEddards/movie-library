@@ -27,3 +27,13 @@
     align-items: center;
     background: #5b6a74;
 }
+.cardsApi{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    height: 100%;
+    background: #ffffff;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-bottom: 4px solid black;
+}

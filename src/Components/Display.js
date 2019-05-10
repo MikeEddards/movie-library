@@ -3,6 +3,7 @@ import axios from 'axios'
 import Edit from './Edit'
 import './Display.css'
 import AddMovie from './AddMovie';
+import EditButton from './EditButton';
 export default class Display extends Component {
     constructor(){
         super()
@@ -48,7 +49,8 @@ export default class Display extends Component {
         <h4>{list.Title}</h4>
         <p>{list.Year}</p>
         
-          <button onClick={() => this.handleClickEdit(list.id)}>Edit</button>
+          <EditButton editButton={this.handleClickEdit}
+          id={list.id}/>
           
       </li>
       ))

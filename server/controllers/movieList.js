@@ -5,7 +5,14 @@ let collection = [{
     imdbID: "tt0095016",
     Type: "movie",
     Poster: "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
-    }
+    },      {
+           id: 2,
+           Title: "Die Hard 2",
+           Year: "1990",
+           imdbID: "tt0099423",
+            Type: "movie",
+          Poster: "https://m.media-amazon.com/images/M/MV5BMzMzYzk3ZTEtZDg0My00MTY5LWE3ZmQtYzNhYjhjN2RhZGRjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+           }
 ]
 
     module.exports = collection

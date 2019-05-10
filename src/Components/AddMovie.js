@@ -74,12 +74,14 @@ export default class AddMovie extends Component {
         <div>
             <ApiSearch addMovie={this.handleAdd}/>
         </div>
+        <button className='addMovieButton' onClick={this.toggleAdd}>Exit</button>
+
         </div>
-        : null
+        : <button className='addMovieButton' onClick={this.toggleAdd}>Add Movie</button>
       
       }
 
-        <button className='addMovieButton' onClick={this.toggleAdd}>Add Movie</button>
+        
       </div>
     )
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import AddButton from './AddButton'
 
 export default class ApiSearch extends Component {
     constructor(){
@@ -8,10 +9,8 @@ export default class ApiSearch extends Component {
             search: [],
             searchInput: '',
             pageId: 1,
-            status: false,
-            title: '',
-            poster: '',
-            year: ''
+            status: false
+     
         }
     }
     handleInput = (val) => {
@@ -36,7 +35,7 @@ export default class ApiSearch extends Component {
         <img className='poster' src={list.Poster} alt=""/>
         <h4>{list.Title}</h4>
         <p>{list.Year}</p>
-        <button onClick={() => this.handleAdd(i)}>Add to list</button>
+        <AddButton addButton={this.handleAdd} id={i}/>
     </li>)
 
 
@@ -50,8 +49,8 @@ export default class ApiSearch extends Component {
       </div>
         <div>
         {this.state.status? 
-        <div className='display'>
-        <ul className="cards">
+        <div>
+        <ul className="cardsApi">
             {movie}
         </ul>
         </div>

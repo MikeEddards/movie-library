@@ -42,7 +42,7 @@ export default class Search extends Component {
           <img src={this.state.selectedMovie.Poster} alt=""/>
           <h4>{this.state.selectedMovie.Title}</h4>
       
-          <button onClick={this.clearSearch}>Clear</button>
+          <button onClick={this.clearSearch}>Exit</button>
          
           </div>
           </div>
