@@ -9,7 +9,8 @@ export default class ApiSearch extends Component {
             search: [],
             searchInput: '',
             pageId: 1,
-            status: false
+            status: false,
+            totalSearch: ''
      
         }
     }
@@ -19,16 +20,31 @@ export default class ApiSearch extends Component {
     handleSearch = () => {
         axios.get(`/api/movieapisearch/${this.state.pageId}/?search=${this.state.searchInput}`).then(
             res => 
-                this.setState({search: res.data.Search})
+                {
+                    this.setState({search: res.data.Search,
+                        totalSearch: res.data.totalResults})}
         ).catch(err => console.log(err))
-        this.setState({status: true})
+        this.setState({status: true,
+        pageId: this.state.pageId + 1})
     }
     handleAdd = (i) => {
         this.props.addMovie(this.state.search[i])
-        this.setState({status: false})
+        this.setState({status: false,
+        totalSearch: '',
+    pageId: 1})
+    
+    }    
+
+       handleNextPage = () => {
+        
+        if(this.state.pageId < +this.state.totalSearch / 10 && this.state.pageId === 1){
+            console.log(this.state.pageId)
+        }
+        
+        this.handleSearch()
     }
   render() {
-
+    
     let { search } = this.state
     const movie = search.map((list, i) => 
       <li className='movieCard' key={i} id={list.id}>
@@ -41,8 +57,16 @@ export default class ApiSearch extends Component {
 
 
     return (
+        
         <div>
       <div className='addMovieApi'>
+     {/* <label for="Movie">
+        <input className='radio' type="radio" value='Movie' checked={true}/>
+        Movie</label>
+        <label for="Tv">
+        <input className='radio' type="radio" value='Tv' checked={false}/>
+        Tv</label> */}
+        
           <input className='addInput'onChange={(e) => this.handleInput(e.target.value)} type="text" placeholder='Search external'/>
           <button onClick={this.handleSearch}>Search</button>
         
@@ -53,6 +77,10 @@ export default class ApiSearch extends Component {
         <ul className="cardsApi">
             {movie}
         </ul>
+        <div>
+        
+            <button onClick={this.handleNextPage}>Next &gt;</button>
+        </div>
         </div>
         : null
             

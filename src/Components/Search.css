@@ -20,4 +20,12 @@ button{
     background: rgb(0, 153, 255);
     border-radius: 16px;
     padding: 8px;
+    cursor: pointer;
+    transition: all .1s ease-in-out; 
+}
+button:hover {
+    transform: scale(1.1);
+    background: rgb(0, 247, 255);
+    color: black;
+    font-weight: bolder;
 }

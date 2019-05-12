@@ -20,7 +20,7 @@ export default class Display extends Component {
         axios.get('/api/movielist')
         .then(res => {
             this.setState({list: res.data})
-          })
+          }).catch(err => console.log(err))
       }
       handleClickEdit = (val) => {
         if(this.state.edit === false){

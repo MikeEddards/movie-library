@@ -1,6 +1,6 @@
 .cards{
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     height: 100%;
     background: #f6fff9;
     margin-top: 50px;
@@ -9,7 +9,7 @@
 .movieCard{
     display: flex;
     background: #5b6a74;
-    width: 40vw;
+    width: 15vw;
     height: 60vh;
     margin: 10px;
     color: white;
@@ -20,9 +20,14 @@
    
 }
 .poster{
-    height: 40vh;
+    height: 30vh;
     margin-top: 10px;  
     border-radius: 7px;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 10px 10px 20px rgb(59, 64, 66); 
+    transition: all .1s ease-in-out; 
+}
+.poster:hover{
+    transform: scale(1.2);
+    box-shadow: 40px 40px 20px rgb(59, 64, 66); 
 }

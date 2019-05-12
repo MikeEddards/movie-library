@@ -26,6 +26,7 @@
     justify-content: center;
     align-items: center;
     background: #5b6a74;
+    color: white;
 }
 .cardsApi{
     display: flex;
@@ -36,4 +37,8 @@
     margin-top: 50px;
     padding-top: 50px;
     border-bottom: 4px solid black;
+}
+.radio{
+    color: rgb(255, 255, 255);
+    background: rgb(0, 153, 255);
 }
