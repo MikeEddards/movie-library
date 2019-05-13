@@ -6,8 +6,10 @@ export default class EditButton extends Component {
      
     return (
       <div>
+        <a href="#edit">
         <button onClick={() => {
             this.props.editButton(this.props.id)}}>Edit</button>
+            </a>
       </div>
     )
   }

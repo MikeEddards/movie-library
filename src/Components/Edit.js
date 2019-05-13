@@ -38,7 +38,7 @@ export default class Edit extends Component {
     return (
       <div>
         {this.props.movie.id ? 
-      <div className='editCard'>
+      <div id='edit' className='editCard'>
         <div className='card'>
         <img className='poster'src={this.props.movie.Poster} />
         <div>

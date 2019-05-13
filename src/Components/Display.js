@@ -4,6 +4,7 @@ import Edit from './Edit'
 import './Display.css'
 import AddMovie from './AddMovie';
 import EditButton from './EditButton';
+
 export default class Display extends Component {
     constructor(){
         super()

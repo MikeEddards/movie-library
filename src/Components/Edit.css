@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background: #5b6a74;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 .card {
     display: flex;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { CSSTransitionGroup } from 'react-transition-group'
+
 import ApiSearch from './ApiSearch'
 import './AddMovie.css'
 export default class AddMovie extends Component {
