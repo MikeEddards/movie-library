@@ -59,7 +59,7 @@ export default class Display extends Component {
         <AddMovie complete={this.completeEdit}/>
         <Edit movie={this.state.movieToEdit} completeEdit={this.completeEdit} />
 
-        <div className='display'>
+        <main className='display'>
         
           <ul className="cards">
             
@@ -67,7 +67,7 @@ export default class Display extends Component {
 
           </ul>
 
-        </div>
+        </main>
         
       </div>
     )

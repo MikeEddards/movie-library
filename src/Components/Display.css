@@ -1,33 +1,37 @@
+
+
 .cards{
     display: flex;
     flex-flow: row wrap;
     height: 100%;
+    width: 100vw;
     background: #f6fff9;
     margin-top: 50px;
     padding-top: 50px;
+    border-top: 3px solid black;
 }
 .movieCard{
     display: flex;
     background: #5b6a74;
     width: 15vw;
-    height: 60vh;
+    height: 50vh;
     margin: 10px;
     color: white;
     border-radius: 15px;
-    border-right: 3px solid rgb(87, 87, 87);
-    border-bottom: 3px solid rgb(87, 87, 87);
-    box-shadow: 5px 5px 10px rgb(131, 131, 131);
+    border: 2px solid rgb(83, 83, 83);
+    box-shadow: 10px 10px 15px rgb(131, 131, 131);
    
 }
 .poster{
     height: 30vh;
     margin-top: 10px;  
     border-radius: 7px;
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: 10px 10px 20px rgb(59, 64, 66); 
-    transition: all .1s ease-in-out; 
+    
+    box-shadow: 10px 10px 20px rgb(32, 33, 34); 
+    transition: all .3s ease-in-out; 
 }
 .poster:hover{
-    transform: scale(1.2);
-    box-shadow: 40px 40px 20px rgb(59, 64, 66); 
+    transform: scale(1.5);
+    box-shadow: 40px 40px 20px rgba(59, 64, 66, 0.507); 
+    
 }

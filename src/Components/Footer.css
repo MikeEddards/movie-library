@@ -1,0 +1,7 @@
+footer {
+    height: 10vh;
+    width: 100%;
+    background: #5b6a74;
+    bottom: 0;
+    border-top: 3px solid black;
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './ApiSearch.css'
+
 import AddButton from './AddButton'
 
 export default class ApiSearch extends Component {
@@ -47,6 +49,7 @@ export default class ApiSearch extends Component {
     
     let { search } = this.state
     const movie = search.map((list, i) => 
+        
       <li className='movieCard' key={i} id={list.id}>
         <img className='poster' src={list.Poster} alt=""/>
         <h4>{list.Title}</h4>
@@ -60,12 +63,7 @@ export default class ApiSearch extends Component {
         
         <div>
       <div className='addMovieApi'>
-     {/* <label for="Movie">
-        <input className='radio' type="radio" value='Movie' checked={true}/>
-        Movie</label>
-        <label for="Tv">
-        <input className='radio' type="radio" value='Tv' checked={false}/>
-        Tv</label> */}
+
         
           <input className='addInput'onChange={(e) => this.handleInput(e.target.value)} type="text" placeholder='Search external'/>
           <button onClick={this.handleSearch}>Search</button>

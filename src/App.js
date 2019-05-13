@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Components/Header'
 import Search from './Components/Search'
 import Display from './Components/Display'
+import Footer from './Components/Footer'
 import './App.css';
 
 function App() {
@@ -10,8 +11,10 @@ function App() {
     <div className="App">
         <Header />
         <Search />
+        
         <Display />
-      
+        
+        <Footer />
     </div>
 
   );

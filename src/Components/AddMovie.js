@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { CSSTransitionGroup } from 'react-transition-group'
 import ApiSearch from './ApiSearch'
 import './AddMovie.css'
 export default class AddMovie extends Component {
@@ -66,10 +67,12 @@ export default class AddMovie extends Component {
         <div>
         <div className='addMovie'>
 
+
           <input className='addInput' onChange={(e)=>this.handleTitle(e.target.value)} type="text" placeholder='Title'/>
           <input className='addInput' onChange={(e)=>this.handleYear(e.target.value)} type="text" placeholder='Year'/>
           <input className='addInput' onChange={(e)=>this.handlePoster(e.target.value)} type="text" placeholder='Url for Movie Poster'/>
           <button onClick={this.handleAdd}>Add to Collection</button>
+      
         </div> 
         <div>
             <ApiSearch addMovie={this.handleAdd}/>

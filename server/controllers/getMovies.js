@@ -16,7 +16,7 @@ let link = require('./.apiLink.js')
             res.status(200).send(collection[index])
         },
         addMovie(req, res){
-            console.log(req.body)
+            
             let id = collection[collection.length - 1].id + 1
             const newMovie ={
                     id: id,
@@ -59,8 +59,7 @@ let link = require('./.apiLink.js')
             let { search } = req.query
             let id = req.params.id
             let data = []
-            console.log(search)
-            console.log(id)
+        
             axios.get(`${link.url}${search}&type=movie&page=${id}&apikey=${link.key}`)
             
             .then(res2 => {data = res2.data

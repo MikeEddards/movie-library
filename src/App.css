@@ -1,10 +1,10 @@
 .App{
     background-image: url('./Images/theater.jpg') ;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     text-align: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100%;
+    
     font-family: 'Libre Baskerville', serif;
 }
 .cards{
@@ -15,6 +15,11 @@
 .movieCard{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
