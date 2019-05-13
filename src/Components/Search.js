@@ -49,9 +49,9 @@ export default class Search extends Component {
           
           : null }
          
-        <div >
+        <div className='searchTitle'>
             <input className='movieSearch' type="text" placeholder='Title' onChange={(e)=> this.handelSearchInput(e.target.value)}/>
-            <button onClick={() => this.handleGetMovieByTitle()}>Search</button>
+            <button onClick={() => this.handleGetMovieByTitle()}>Search Titles</button>
             
         </div>
       </div>
